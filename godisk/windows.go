@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	slicetils "github.com/michaeldcanady/Slicetils/SliceTils"
-	"github.com/michaeldcanady/Windows-api/Windows-Api/kernel32"
+	kernel32 "github.com/michaeldcanady/Windows-api/Windows-Api/kernel32"
 	convert "github.com/michaeldcanady/goconversion/Conversion"
 )
 
@@ -25,12 +25,15 @@ type disk struct {
 	Total                    int64
 }
 
-func New() *Disk {
-	D := Disk{}
+// New Can be used by user to generate a new Disk struct
+func New(volumeName string) (*Disk, error) {
 
-	return &D
+	D, err := GetDrive(volumeName)
+
+	return &D, err
 }
 
+// GetDrive Gathers all information from the provided volumeName
 func GetDrive(volumeName string) (disk Disk, err error) {
 	drives := kernel32.GetLogicalDriveStrings()
 
@@ -50,16 +53,15 @@ func GetDrive(volumeName string) (disk Disk, err error) {
 
 func newDisk(volume, driveType string, volumeInfo kernel32.Volume, Free, Used, Total int64) Disk {
 	d := disk{
-		volume:                   volume,
-		label:                    volumeInfo.VolumeLabel,
-		driveType:                driveType,
-		SerialNumber:             volumeInfo.SerialNumber,
-		lpMaximumComponentLength: volumeInfo.LpMaximumComponentLength,
-		SystemFlags:              volumeInfo.SystemFlags,
-		FileSystem:               volumeInfo.FileSystem,
-		Free:                     Free,
-		Used:                     Used,
-		Total:                    Total,
+		volume:       volume,
+		label:        volumeInfo.VolumeLabel,
+		driveType:    driveType,
+		SerialNumber: volumeInfo.SerialNumber,
+		SystemFlags:  volumeInfo.SystemFlags,
+		FileSystem:   volumeInfo.FileSystem,
+		Free:         Free,
+		Used:         Used,
+		Total:        Total,
 	}
 	return Disk(d)
 }
@@ -74,7 +76,7 @@ func GetDrives() (disks []Disk) {
 		}
 		volumeInfo := kernel32.GetVolumeInformationW(d)
 
-		free, total, _, used := kernel32.GetDisckFreeSpaceEx(d)
+		free, total, _, used := kernel32.GetDiskFreeSpaceEx(d)
 
 		disks = append(disks, newDisk(d, typ, volumeInfo, free, used, total))
 	}

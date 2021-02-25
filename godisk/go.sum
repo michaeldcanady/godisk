@@ -1,6 +1,6 @@
-github.com/michaeldcanady/Slicetils v0.0.0-20201221173754-9289f3ae6d2b h1:sX/FvCbNS6GwAC6qgBZOvXdCnkvSu4hT2oAcALGb7hw=
-github.com/michaeldcanady/Slicetils v0.0.0-20201221173754-9289f3ae6d2b/go.mod h1:iIxZix6xYEJ6d8cn2jtn6AO5J7JBo2zUPsuUbI31koc=
-github.com/michaeldcanady/Windows-api v0.0.0-20210110223720-a90bc4e14240 h1:8Ivb/3XBfbLbg6HV0ocaZWktDKLtOpfcuT4qdGYQ0es=
-github.com/michaeldcanady/Windows-api v0.0.0-20210110223720-a90bc4e14240/go.mod h1:ujtWZi/PFpoickKpoH9kIYwB0ZoKhEFdFv96ymxKTDE=
+github.com/michaeldcanady/Slicetils/SliceTils v0.0.0-20210225154424-34d9532ed5d5 h1:yJTnSo+Blg/GBOR4fwEg1fNmAofmyY03SG8XaHiRg+8=
+github.com/michaeldcanady/Slicetils/SliceTils v0.0.0-20210225154424-34d9532ed5d5/go.mod h1:GMrWoX55beyzt4FZuwjufc0pSjV6bTBRHWlKLaxZ6f0=
+github.com/michaeldcanady/Windows-api v0.0.0-20210225160204-a54dc54247a5 h1:BpHctGxCNvsfnTLeItqyN3ZVMcnrBFz/gdxOGKu2jOE=
+github.com/michaeldcanady/Windows-api v0.0.0-20210225160204-a54dc54247a5/go.mod h1:ujtWZi/PFpoickKpoH9kIYwB0ZoKhEFdFv96ymxKTDE=
 github.com/michaeldcanady/goconversion/Conversion v0.0.0-20210225154955-020d719093e6 h1:Rf0SwcW3qmq8fQv+jqSBEPegnb19qlP7ABBXsHE/AAA=
 github.com/michaeldcanady/goconversion/Conversion v0.0.0-20210225154955-020d719093e6/go.mod h1:O459UefiE8pEB2DXmk8CpsvChcr7rd1n3uINaYT8+Fo=

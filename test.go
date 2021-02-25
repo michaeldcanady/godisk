@@ -1,11 +1,13 @@
 package main
 
-import(
-  "github.com/michaeldcanady/godisk/godisk"
+import (
+	"fmt"
+
+	"github.com/michaeldcanady/godisk/godisk"
 )
 
 func main() {
-  for _, drive := godisk.GetDrives() {
-    fmt.Println(drive)
-  }
+	for _, drive := range godisk.GetDrives() {
+		fmt.Println(drive)
+	}
 }

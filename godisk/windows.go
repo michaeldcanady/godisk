@@ -3,11 +3,12 @@ package godisk
 import (
 	"fmt"
 
-	slicetils "github.com/michaeldcanady/Slicetils/SliceTils"
-	kernel32 "github.com/michaeldcanady/Windows-api/Windows-Api/kernel32"
-	convert "github.com/michaeldcanady/goconversion/Conversion"
+	"github.com/michaeldcanady/Slicetils/SliceTils"
+	"github.com/michaeldcanady/Windows-api/Windows-Api/kernel32"
+	"github.com/michaeldcanady/goconversion/Conversion"
 )
 
+// Disk public facing version of disk
 type Disk disk
 
 type disk struct {
